@@ -131,7 +131,7 @@ export default function Bio() {
           <div className="absolute inset-0 rounded-2xl blur-xl opacity-30 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-glow3"></div>
 
           <Image
-            src="https://github.com/HamiParsa/My-Profile/blob/main/public/image.png"
+            src="https://i.ibb.co/h5pf15q/image.png"
             width={400}
             height={400}
             alt="Hami Parsa"
