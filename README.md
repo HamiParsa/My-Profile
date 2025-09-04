@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div>
+  <h1>Click on the GitHub icon below to view the project online.</h1>
+  <a href="https://hamiparsa.github.io/My-Profile/">
+    <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</div>
 
-## Getting Started
+Portfolio Project 💻🎨🚀
 
-First, run the development server:
+This is a personal portfolio website showcasing my skills, projects, and contact information with a modern and responsive design.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Features:
+<ul>
+  <li>
+    Home Page with animated introduction and neon-glow effects
+  </li>
+  <li>
+    About Section displaying skills with interactive cards
+  </li>
+  <li>
+    Projects Showcase with image sliders, technology badges, and live links
+  </li>
+  <li>
+    Contact Form using EmailJS for direct messaging
+  </li>
+  <li>
+    Fully responsive layout for mobile, tablet, and desktop
+  </li>
+  <li>
+    Dark and light theme support with smooth transitions
+  </li>
+</ul>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Technologies Used:
+<ul>
+  <li>
+    React for building UI components 
+    <img width='20px' src='https://skillicons.dev/icons?i=react'>
+  </li>
+  <li>
+    Next.js for routing and server-side features
+    <img width='20px' src='https://skillicons.dev/icons?i=next'>
+  </li>
+  <li>
+    TypeScript for type safety and better code quality
+    <img width='20px' src='https://skillicons.dev/icons?i=typescript'>
+  </li>
+  <li>
+    Tailwind CSS for fast and responsive styling
+    <img width='20px' src='https://skillicons.dev/icons?i=tailwindcss'>
+  </li>
+  <li>
+    Framer Motion for animations and interactive UI
+    <img width='20px' src='https://skillicons.dev/icons?i=framer'>
+  </li>
+  <li>
+    React Icons for scalable vector icons
+    <img width='20px' src='https://skillicons.dev/icons?i=reacticons'>
+  </li>
+</ul>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Description:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project demonstrates a modern, interactive, and visually appealing portfolio. Users can explore my skills, view projects with image sliders, and send messages via a contact form. The site uses React, Next.js, TypeScript, Tailwind CSS, and Framer Motion to create a smooth and engaging user experience.
 
-## Learn More
+Perfect for showcasing front-end development skills and practicing modern web technologies.
 
-To learn more about Next.js, take a look at the following resources:
+<hr/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<h1 align="center">Project Images : 🖼️</h1>
+<div align="center">
+  <img src="/image.png" width="700px" />
+  <br/>
+  <br/>
+  
+  <img src="/pic1.png" width="700px" />
+  <br/>
+  <br/>
+  <img src="/pic2.png" width="700px" />
+</div>
+<hr>
+<div align="center">
+  <img src="/pic3.png" width="700px" />
+</div>
