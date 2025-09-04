@@ -1,23 +1,23 @@
-import Bio from '@/components/Bio'
+import React from "react";
+import Bio from "@/components/Bio";
+import Projects from "@/components/Projects";
+import ProjectRequestForm from "@/components/ProjectRequestForm";
+import ScrollAppearNoJump from "@/components/ScrollFadeIn";
 
-import ProjectRequestForm from '@/components/ProjectRequestForm'
-import Projects from '@/components/Projects'
-import ScrollAppearNoJump from '@/components/ScrollFadeIn'
-import React from 'react'
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div>
+    <main>
       <ScrollAppearNoJump>
-      <Bio />
+        <Bio />
       </ScrollAppearNoJump>
+
       <ScrollAppearNoJump>
-      <Projects  />
+        <Projects />
       </ScrollAppearNoJump>
+
       <ScrollAppearNoJump>
         <ProjectRequestForm />
       </ScrollAppearNoJump>
-    
-    </div>
-  )
+    </main>
+  );
 }

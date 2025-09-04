@@ -1,23 +1,13 @@
-/** 
- * @type {import('next').NextConfig} 
- *
- * Next.js configuration file:
- * - Enables React Strict Mode for highlighting potential problems in development.
- * - Configures remotePatterns for loading images from "raw.githubusercontent.com".
- * - Prepares project for static export (GitHub Pages).
- * - Sets basePath and assetPrefix for GitHub Pages deployment.
- */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export", // Required for static export
   reactStrictMode: true,
-  output: 'export', // Export as static HTML for GitHub Pages
-  basePath: '/my-portfolio', // Replace 'my-portfolio' with your repo name
-  assetPrefix: '/my-portfolio/',
   images: {
+    unoptimized: true, // Disable Image Optimization API
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "raw.githubusercontent.com",
-        port: "",
+        hostname: "raw.githubusercontent.com", // For external images
         pathname: "/**",
       },
     ],
