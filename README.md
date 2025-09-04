@@ -69,10 +69,6 @@ Perfect for showcasing front-end development skills and practicing modern web te
 
 <h1 align="center">Project Images : 🖼️</h1>
 <div align="center">
-  <img src="/image.png" width="700px" />
-  <br/>
-  <br/>
-  
   <img src="/pic1.png" width="700px" />
   <br/>
   <br/>
