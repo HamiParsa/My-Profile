@@ -34,7 +34,7 @@ export default function Footer() {
             <FaLinkedin size={32} />
           </a>
           <a
-            href="https://t.me/hamiparsa"
+            href="https://t.me/hamiparsa_chanel"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-purple-400 transition-all duration-300 transform hover:scale-125 hover:shadow-lg hover:shadow-purple-400/60"
