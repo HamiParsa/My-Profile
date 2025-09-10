@@ -76,6 +76,38 @@ const projectsData = [
       },
     ],
   },
+  {
+    name: "Game Zone",
+    url: "https://68c0c2e45771a622f455eea7--game-zone1.netlify.app/",
+    images: [
+      "https://github.com/HamiParsa/Game-Zone/raw/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Game-Zone/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/Game-Zone/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/Game-Zone/main/pic4.png"
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Zustand",
+        icon: <TbBrandRedux className="text-purple-600 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 function ProjectSlider({ project }) {
