@@ -102,9 +102,30 @@ const projectsData = [
         name: "Tailwind CSS",
         icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
       },
+    ],
+  },
+  {
+    name: "Music Player",
+    url: "https://hamiparsa.github.io/Music-Player/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Music-Player/main/pic1.png",
+    ],
+    tech: [
       {
-        name: "Zustand",
-        icon: <TbBrandRedux className="text-purple-600 text-2xl sm:text-3xl" />,
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
       },
     ],
   },
