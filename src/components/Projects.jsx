@@ -129,6 +129,41 @@ const projectsData = [
       },
     ],
   },
+    {
+    name: "Kouman",
+    url: "https://68c7ac2f4c5bce0008b0353f--kouman.netlify.app/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Kouman/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Kouman/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/Kouman/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/Kouman/main/pic4.png",
+      "https://raw.githubusercontent.com/HamiParsa/Kouman/main/pic5.png",
+      "https://raw.githubusercontent.com/HamiParsa/Kouman/main/pic6.png",
+      "https://raw.githubusercontent.com/HamiParsa/Kouman/main/pic7.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Zustand",
+        icon: <TbBrandRedux className="text-purple-600 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 function ProjectSlider({ project }) {
