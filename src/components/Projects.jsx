@@ -164,6 +164,34 @@ const projectsData = [
       },
     ],
   },
+    {
+    name: "Coffee Shop",
+    url: "https://hamiparsa.github.io/Coffee-Shop/",
+    images: [
+      "https://github.com/HamiParsa/Coffee-Shop/raw/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Coffee-Shop/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/Coffee-Shop/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/Coffee-Shop/main/pic4.png"
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 function ProjectSlider({ project }) {
