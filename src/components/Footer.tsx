@@ -1,7 +1,6 @@
 "use client";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaTelegramPlane } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -32,14 +31,6 @@ export default function Footer() {
             className="text-gray-300 hover:text-blue-500 transition-all duration-300 transform hover:scale-125 hover:shadow-lg hover:shadow-blue-500/60"
           >
             <FaLinkedin size={32} />
-          </a>
-          <a
-            href="https://t.me/hamiparsa_chanel"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-purple-400 transition-all duration-300 transform hover:scale-125 hover:shadow-lg hover:shadow-purple-400/60"
-          >
-            <FaTelegramPlane size={32} />
           </a>
         </div>
       </div>
