@@ -196,7 +196,7 @@ const projectsData = [
     name: "Galaxy",
     url: "https://hamiparsa.github.io/Galaxy/",
     images: [
-      "https://hamiparsa.github.io/Galaxy/",
+      "https://raw.githubusercontent.com/HamiParsa/Galaxy/main/pic1.png",
     ],
     tech: [
       {
