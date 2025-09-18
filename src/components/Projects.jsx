@@ -192,6 +192,59 @@ const projectsData = [
       },
     ],
   },
+    {
+    name: "Galaxy",
+    url: "https://hamiparsa.github.io/Galaxy/",
+    images: [
+      "https://hamiparsa.github.io/Galaxy/",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
+    {
+    name: "Eminem",
+    url: "https://hamiparsa.github.io/Eminem/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Eminem/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Eminem/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/Eminem/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/Eminem/main/pic4.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 function ProjectSlider({ project }) {
