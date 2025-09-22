@@ -4,7 +4,7 @@
 /* Apply styles to html and body */
 html, body {
   /* Set dark background color */
-  background-color: #0F0E0E;
+  background-color: black;
 
   /* Enable smooth scrolling for anchor links */
   scroll-behavior: smooth;

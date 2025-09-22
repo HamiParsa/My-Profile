@@ -1,31 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { FaUser, FaEnvelope, FaPhone, FaCommentDots } from "react-icons/fa";
 
 export default function ContactForm() {
-  // State for form inputs
   const [form, setForm] = useState({ name: "", email: "", number: "", message: "" });
-
-  // State for success/error status message
   const [status, setStatus] = useState("");
+  const [particles, setParticles] = useState<{ top: number; left: number; delay: number }[]>([]);
 
-  // Function to send email via EmailJS
+  // ===============================
+  // Generate particles on client only
+  // ===============================
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: 20 }).map(() => ({
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        delay: Math.random() * 5,
+      }))
+    );
+  }, []);
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-
     emailjs
-      .send(
-        "service_97usflj",    // EmailJS service ID
-        "template_m9immuc",   // EmailJS template ID
-        form,                 // Form data
-        "q1s3x3DSUxpAVErUh"   // EmailJS public key
-      )
+      .send("service_97usflj", "template_m9immuc", form, "q1s3x3DSUxpAVErUh")
       .then(
         () => {
           setStatus("Message sent successfully ✅");
-          setForm({ name: "", email: "", number: "", message: "" }); // Reset form
+          setForm({ name: "", email: "", number: "", message: "" });
         },
         (error) => {
           console.error(error);
@@ -35,55 +39,46 @@ export default function ContactForm() {
   };
 
   return (
-    <div
-      id="contact"
-      className="text-white max-w-3xl mt-[150px] mx-auto p-8 backdrop-blur-md rounded-3xl shadow-2xl border border-gray-200"
-    >
+    <div id="contact" className="relative max-w-3xl mt-[150px] mx-auto p-8 backdrop-blur-lg bg-black/50 rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
+      {/* Background Neon Particles */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        {particles.map((p, index) => (
+          <div
+            key={index}
+            className="absolute w-2 h-2 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 opacity-50 animate-floatSlow"
+            style={{
+              top: `${p.top}%`,
+              left: `${p.left}%`,
+              animationDelay: `${p.delay}s`,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Form Title */}
       <h2 className="text-3xl font-extrabold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-gradient-x">
-        Contact Us
+        Contact Me
       </h2>
 
       {/* Contact Form */}
       <form onSubmit={sendEmail} className="flex flex-col gap-6">
-        {/* Name Field */}
-        <div className="relative group">
-          <FaUser className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400 text-xl group-hover:text-pink-500 transition-all duration-300" />
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="p-4 text-white pl-12 rounded-2xl bg-white/10 placeholder-gray-400 text-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all duration-300 w-full"
-            required
-          />
-        </div>
-
-        {/* Email Field */}
-        <div className="relative group">
-          <FaEnvelope className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400 text-xl group-hover:text-purple-500 transition-all duration-300" />
-          <input
-            type="email"
-            placeholder="Your Email"
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="p-4 pl-12 rounded-2xl bg-white/10 placeholder-gray-400 text-white text-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300 w-full"
-            required
-          />
-        </div>
-
-        {/* Phone Number Field */}
-        <div className="relative group">
-          <FaPhone className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400 text-xl group-hover:text-indigo-500 transition-all duration-300" />
-          <input
-            type="tel"
-            placeholder="Your Number"
-            value={form.number}
-            onChange={(e) => setForm({ ...form, number: e.target.value })}
-            className="p-4 pl-12 rounded-2xl bg-white/10 placeholder-gray-400 text-white text-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300 w-full"
-            required
-          />
-        </div>
+        {[
+          { placeholder: "Your Name", value: form.name, icon: FaUser, key: "name", type: "text", color: "pink" },
+          { placeholder: "Your Email", value: form.email, icon: FaEnvelope, key: "email", type: "email", color: "purple" },
+          { placeholder: "Your Number", value: form.number, icon: FaPhone, key: "number", type: "tel", color: "indigo" },
+        ].map((field) => (
+          <div key={field.key} className="relative group">
+            <field.icon className={`absolute top-1/2 left-4 -translate-y-1/2 text-gray-400 text-xl group-hover:text-${field.color}-400 transition-all duration-300`} />
+            <input
+              type={field.type}
+              placeholder={field.placeholder}
+              value={field.value}
+              onChange={(e) => setForm({ ...form, [field.key]: e.target.value })}
+              className={`p-4 pl-12 rounded-2xl bg-white/10 placeholder-gray-400 text-white text-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-${field.color}-500 transition-all duration-300 w-full`}
+              required
+            />
+          </div>
+        ))}
 
         {/* Message Field */}
         <div className="relative group">
@@ -111,20 +106,25 @@ export default function ContactForm() {
         <p className="mt-6 text-center text-white font-semibold">{status}</p>
       )}
 
-      {/* Custom Animation for Gradient Title */}
-      <style>
-        {`
-          .animate-gradient-x {
-            background-size: 200% 200%;
-            animation: gradient-x 8s ease infinite;
-          }
-          @keyframes gradient-x {
-            0% {background-position:0% 50%}
-            50% {background-position:100% 50%}
-            100% {background-position:0% 50%}
-          }
-        `}
-      </style>
+      {/* Animations */}
+      <style jsx>{`
+        @keyframes gradient-x {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 8s ease infinite;
+        }
+        @keyframes floatSlow {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(15px); }
+        }
+        .animate-floatSlow {
+          animation: floatSlow 6s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 }
