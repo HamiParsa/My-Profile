@@ -245,6 +245,90 @@ const projectsData = [
       },
     ],
   },
+    {
+    name: "TMNT",
+    url: "https://hamiparsa.github.io/TMNT/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/TMNT/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/TMNT/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/TMNT/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/TMNT/main/pic4.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
+    {
+    name: "Hyper Net",
+    url: "https://hamiparsa.github.io/Hyper-Net/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Hyper-Net/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Hyper-Net/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/Hyper-Net/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/Hyper-Net/main/pic4.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
+    {
+    name: "Code Space",
+    url: "https://hamiparsa.github.io/Code-Space/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Code-Space/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Code-Space/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/Code-Space/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/Code-Space/main/pic4.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 function ProjectSlider({ project }) {
