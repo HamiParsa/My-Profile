@@ -357,6 +357,31 @@ const projectsData = [
       },
     ],
   },
+  {
+    name: "Phone Music Player",
+    url: "https://hamiparsa.github.io/Phone-Music-Player/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Phone-Music-Player/main/pic1.png"
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 // Component for individual project slider
@@ -491,7 +516,10 @@ function ProjectSlider({ project }) {
 // Main Component rendering all projects
 export default function ProjectsShowcase() {
   return (
-    <main id="projects" className="mt-[100px] text-white min-h-screen p-4 sm:p-6 lg:p-8 space-y-12 sm:space-y-16 lg:space-y-20">
+    <main
+      id="projects"
+      className="mt-[100px] text-white min-h-screen p-4 sm:p-6 lg:p-8 space-y-12 sm:space-y-16 lg:space-y-20"
+    >
       {/* Section Title with Neon Heart */}
       <h2 className="text-2xl flex justify-center sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent animate-gradient-x">
         Projects Made with Love{" "}
