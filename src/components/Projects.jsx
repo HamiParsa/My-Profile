@@ -382,6 +382,41 @@ const projectsData = [
       },
     ],
   },
+  {
+    name: "Anime Shop",
+    url: "https://68d824c2fcc42fb40adc4396--spiffy-kringle-0e26e5.netlify.app/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Anime-Shop/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Anime-Shop/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/Anime-Shop/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/Anime-Shop/main/pic4.png",
+      "https://raw.githubusercontent.com/HamiParsa/Anime-Shop/main/pic5.png",
+      "https://raw.githubusercontent.com/HamiParsa/Anime-Shop/main/pic6.png",
+      "https://raw.githubusercontent.com/HamiParsa/Anime-Shop/main/pic7.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Zustand",
+        icon: <TbBrandRedux className="text-purple-600 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 // Component for individual project slider
