@@ -470,6 +470,32 @@ const projectsData = [
       },
     ],
   },
+  {
+    name: "Youtube",
+    url: "https://68dd0ea5d5bc2569c7ec0a2c--lighthearted-tarsier-75bef8.netlify.app/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Youtube/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Youtube/main/pic2.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 // Component for individual project slider
