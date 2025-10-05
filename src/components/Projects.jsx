@@ -550,6 +550,32 @@ const projectsData = [
       },
     ],
   },
+  {
+    name: "Second Hand Shop",
+    url: "https://68e275dd8eb29772d65fdb15--delightful-wisp-111a27.netlify.app/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Second-Hand-Shop/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Second-Hand-Shop/main/pic2.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 // Component for individual project slider
