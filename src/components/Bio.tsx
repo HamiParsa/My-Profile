@@ -61,7 +61,7 @@ export default function Bio() {
   }, [mounted, motionX, motionY]);
 
   return (
-    <div id="about" className="relative min-h-screen font-bricolage overflow-hidden">
+    <div id="about" className="relative mt-20 min-h-screen font-bricolage overflow-hidden">
       {/* ===== Galaxy Background Component ===== */}
       <GalaxyBackground />
 
@@ -77,16 +77,16 @@ export default function Bio() {
           transition={{ duration: 6, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
         >
           {/* Layered Gradient Glows */}
-          <div className="absolute inset-0 rounded-2xl blur-3xl opacity-60 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-glow1"></div>
-          <div className="absolute inset-0 rounded-2xl blur-2xl opacity-40 bg-gradient-to-r from-purple-400 via-pink-400 to-pink-600 animate-glow2"></div>
-          <div className="absolute inset-0 rounded-2xl blur-xl opacity-30 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-glow3"></div>
+          <div className="absolute inset-0 rounded-2xl blur-3xl opacity-60"></div>
+          <div className="absolute inset-0 rounded-2xl blur-2xl opacity-40 "></div>
+          <div className="absolute inset-0 rounded-2xl blur-xl opacity-30 "></div>
 
           <Image
             src="https://yourimageshare.com/ib/UVnX7XVOwt.jpg"
             width={400}
             height={400}
             alt="Hami Parsa"
-            className="relative rounded-2xl shadow-2xl border border-gray-800"
+            className="relative mt-5 rounded-2xl shadow-2xl border border-gray-800"
           />
         </motion.div>
 
@@ -120,7 +120,7 @@ export default function Bio() {
       </div>
 
       {/* ===== Bio Paragraph ===== */}
-      <p className="text-white text-center mt-[300px] max-w-3xl mx-auto text-lg sm:text-xl leading-relaxed">
+      <p className="text-white text-center mt-20 max-w-3xl mx-auto text-lg sm:text-xl leading-relaxed">
         Hi, Im <span className="font-bold text-pink-500">Hami Parsa</span> — a <span className="text-indigo-400 font-semibold">passionate Front-End Developer</span> crafting <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 font-bold">modern, interactive, and visually stunning</span> web experiences.
       </p>
 
@@ -140,6 +140,7 @@ export default function Bio() {
         @keyframes textGradient { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
         .animate-textGradient { background-size: 200% 200%; animation: textGradient 6s ease-in-out infinite; }
       `}</style>
+      
     </div>
   );
 }
