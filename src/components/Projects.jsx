@@ -78,7 +78,7 @@ const projectsData = [
   },
   {
     name: "Game Zone",
-    url: "https://68c0c2e45771a622f455eea7--game-zone1.netlify.app/",
+    url: "https://68ed02f96988f880c055bca2--stellular-salamander-2f94ef.netlify.app/",
     images: [
       "https://github.com/HamiParsa/Game-Zone/raw/main/pic1.png",
       "https://raw.githubusercontent.com/HamiParsa/Game-Zone/main/pic2.png",
@@ -641,6 +641,34 @@ const projectsData = [
       "https://raw.githubusercontent.com/HamiParsa/Luxury-Beauty/main/pic3.png",
       "https://raw.githubusercontent.com/HamiParsa/Luxury-Beauty/main/pic4.png",
       "https://raw.githubusercontent.com/HamiParsa/Luxury-Beauty/main/pic5.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
+  {
+    name: "Melody Hub",
+    url: "https://hamiparsa.github.io/Melody-Hub/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Melody-Hub/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Melody-Hub/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/Melody-Hub/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/Melody-Hub/main/pic4.png",
     ],
     tech: [
       {
