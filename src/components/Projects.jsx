@@ -719,6 +719,36 @@ const projectsData = [
       },
     ],
   },
+  {
+    name: "Rockstar Games",
+    url: "https://hamiparsa.github.io/Rockstar-Games/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Rockstar-Games/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Rockstar-Games/main/pic2.png",
+      "https://raw.githubusercontent.com/HamiParsa/Rockstar-Games/main/pic3.png",
+      "https://raw.githubusercontent.com/HamiParsa/Rockstar-Games/main/pic4.png",
+      "https://raw.githubusercontent.com/HamiParsa/Rockstar-Games/main/pic5.png",
+      "https://raw.githubusercontent.com/HamiParsa/Rockstar-Games/main/pic6.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 // Component for individual project slider
