@@ -749,6 +749,32 @@ const projectsData = [
       },
     ],
   },
+  {
+    name: "Tesla",
+    url: "https://hamiparsa.github.io/Tesla/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Tesla/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Tesla/main/pic2.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
 ];
 
 // Component for individual project slider
