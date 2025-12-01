@@ -82,7 +82,7 @@ export default function Bio() {
           <div className="absolute inset-0 rounded-2xl blur-xl opacity-30 "></div>
 
           <Image
-            src="https://yourimageshare.com/ib/UVnX7XVOwt.jpg"
+            src="https://yourimageshare.com/ib/QtGqNA2lCH.png"
             width={400}
             height={400}
             alt="Hami Parsa"

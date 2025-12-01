@@ -361,7 +361,7 @@ const projectsData = [
     name: "Phone Music Player",
     url: "https://hamiparsa.github.io/Phone-Music-Player/",
     images: [
-      "https://raw.githubusercontent.com/HamiParsa/Phone-Music-Player/main/pic1.png"
+      "https://raw.githubusercontent.com/HamiParsa/Phone-Music-Player/main/pic1.png",
     ],
     tech: [
       {
@@ -421,7 +421,7 @@ const projectsData = [
     name: "Js Compiler",
     url: "https://github.com/HamiParsa/Js-Compiler",
     images: [
-      "https://raw.githubusercontent.com/HamiParsa/Js-Compiler/main/pic1.png"
+      "https://raw.githubusercontent.com/HamiParsa/Js-Compiler/main/pic1.png",
     ],
     tech: [
       {
@@ -778,8 +778,32 @@ const projectsData = [
   {
     name: "Art The Clown",
     url: "https://hamiparsa.github.io/Art-The-Clown/",
+    images: ["https://github.com/HamiParsa/Art-The-Clown/raw/main/pic1.png"],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
+  {
+    name: "My Messenger",
+    url: "https://hamiparsa.github.io/My-Messenger/",
     images: [
-      "https://github.com/HamiParsa/Art-The-Clown/raw/main/pic1.png"
+      "https://raw.githubusercontent.com/HamiParsa/My-Messenger/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/My-Messenger/main/pic2.png",
     ],
     tech: [
       {
@@ -801,11 +825,124 @@ const projectsData = [
     ],
   },
   {
-    name: "My-Messenger",
-    url: "https://hamiparsa.github.io/My-Messenger/",
+    name: "MamanPaz",
+    url: "https://mamanpaz47.ir/",
     images: [
-      "https://raw.githubusercontent.com/HamiParsa/My-Messenger/main/pic1.png",
-      "https://raw.githubusercontent.com/HamiParsa/My-Messenger/main/pic2.png",
+      "https://yourimageshare.com/ib/9q6Nc8J62T.png",
+      "https://yourimageshare.com/ib/RGe9D01vKg.png",
+      "https://yourimageshare.com/ib/t3SfNTD9HN.png",
+      "https://yourimageshare.com/ib/tSPK7Bec0B.png",
+      "https://yourimageshare.com/ib/haMSN0T1yD.png",
+      "https://yourimageshare.com/ib/PCCTkmyMET.png",
+      "https://yourimageshare.com/ib/kCRSvfc89Q.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Zustand",
+        icon: <TbBrandRedux className="text-purple-600 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
+  {
+    name: "NewYork",
+    url: "https://hamiparsa.github.io/NewYork/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/NewYork/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/NewYork/main/pic2.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
+  {
+    name: "Sexy-Arena",
+    url: "https://hamiparsa.github.io/Sexy-Arena/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Sexy-Arena/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Sexy-Arena/main/pic2.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
+  {
+    name: "Los Angeles",
+    url: "https://hamiparsa.github.io/Los-Angeles/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Los-Angeles/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Los-Angeles/main/pic2.png",
+    ],
+    tech: [
+      {
+        name: "React",
+        icon: <FaReact className="text-sky-400 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Next.js",
+        icon: <RiNextjsFill className="text-white text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="text-blue-500 text-2xl sm:text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-cyan-400 text-2xl sm:text-3xl" />,
+      },
+    ],
+  },
+  {
+    name: "Mia & Kourosh",
+    url: "https://hamiparsa.github.io/Mia-Kourosh/",
+    images: [
+      "https://raw.githubusercontent.com/HamiParsa/Mia-Kourosh/main/pic1.png",
+      "https://raw.githubusercontent.com/HamiParsa/Mia-Kourosh/main/pic2.png",
     ],
     tech: [
       {
@@ -962,27 +1099,46 @@ export default function ProjectsShowcase() {
   return (
     <main
       id="projects"
-      className="mt-[100px] text-white min-h-screen p-4 sm:p-6 lg:p-8 space-y-12 sm:space-y-16 lg:space-y-20"
+      className="mt-[100px] min-h-screen p-4 sm:p-6 lg:p-8 space-y-12 sm:space-y-16 lg:space-y-20 text-white relative overflow-hidden"
     >
+      {/* Neon Background Shapes */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10">
+        <div className="absolute w-72 h-72 bg-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob top-10 left-10"></div>
+        <div className="absolute w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000 top-60 right-20"></div>
+        <div className="absolute w-80 h-80 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-4000 bottom-20 left-1/2 transform -translate-x-1/2"></div>
+      </div>
+
       {/* Section Title with Neon Heart */}
-      <h2 className="text-2xl flex justify-center sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent animate-gradient-x">
-        Projects Made with Love{" "}
-        <MdMonitorHeart className="mt-1 ml-1 text-red-400 animate-pulse" />
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold flex justify-center items-center bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent animate-gradient-x tracking-wider drop-shadow-[0_0_10px_rgb(236,72,153)]">
+        Projects Made with Love
+        <MdMonitorHeart className="ml-2 mt-1 text-red-400 animate-pulse text-3xl drop-shadow-lg" />
       </h2>
 
-      {/* Render all projects */}
+      {/* Render all projects with scroll animation */}
       <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16 lg:gap-20">
         {projectsData.map((p, i) => (
-          <div key={i}>
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: i * 0.1 }}
+            className="p-4 sm:p-6 lg:p-8 rounded-3xl backdrop-blur-md bg-gradient-to-r from-white/5 via-white/10 to-white/5 border border-white/10 shadow-xl transition-all duration-500"
+          >
             <ProjectSlider project={p} />
-            <hr
-              className="my-10 h-1 w-full border-0 rounded-full 
-                bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 
-                shadow-[0_0_15px_rgba(236,72,153,0.7),0_0_30px_rgba(236,72,153,0.5)]"
-            />
-          </div>
+          </motion.div>
         ))}
+
+        <hr
+          className="my-10 h-1 w-full border-0 rounded-full 
+                bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 
+                shadow-[0_0_15px_rgba(236,72,153,0.7),0_0_30px_rgba(236,72,153,0.5)]
+                animate-pulse"
+        />
       </div>
+
+      {/* Neon Glow Overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.05)_0%,_transparent_70%)]"></div>
     </main>
   );
 }

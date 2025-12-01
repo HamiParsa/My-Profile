@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,6 +10,20 @@ import { FaProjectDiagram, FaEnvelope } from "react-icons/fa";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [particles, setParticles] = useState<{ top: number; left: number; size: number; delay: number; color: string }[]>([]);
+
+  useEffect(() => {
+    const colors = ["#EC4899", "#8B5CF6", "#3B82F6", "#F59E0B", "#10B981"];
+    setParticles(
+      Array.from({ length: 15 }).map(() => ({
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        size: Math.random() * 4 + 2,
+        delay: Math.random() * 5,
+        color: colors[Math.floor(Math.random() * colors.length)],
+      }))
+    );
+  }, []);
 
   const menuItems = [
     { name: "About", href: "#about", icon: FcAbout },
@@ -19,6 +33,29 @@ export default function NavBar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
+      {/* Neon Glow Backplate */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-15 blur-3xl"></div>
+
+      {/* Particles */}
+      <div className="absolute inset-0 pointer-events-none -z-20">
+        {particles.map((p, i) => (
+          <motion.span
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              top: `${p.top}%`,
+              left: `${p.left}%`,
+              width: `${p.size}px`,
+              height: `${p.size}px`,
+              backgroundColor: p.color,
+              boxShadow: `0 0 10px ${p.color}, 0 0 20px ${p.color}`,
+            }}
+            animate={{ y: [-5, 5, -5] }}
+            transition={{ duration: 4 + Math.random() * 4, repeat: Infinity, delay: p.delay }}
+          />
+        ))}
+      </div>
+
       {/* Container */}
       <motion.div
         initial={{ y: -80, opacity: 0 }}
@@ -28,17 +65,15 @@ export default function NavBar() {
       >
         <div
           className="flex items-center justify-between h-16 mt-4 px-6 rounded-full
-          backdrop-blur-xl border border-white/20 shadow-lg shadow-purple-500/20"
+          backdrop-blur-xl bg-black/70 border border-white/10 shadow-lg shadow-purple-500/40 relative"
         >
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl flex font-extrabold 
-              bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 
-              bg-clip-text text-transparent"
+            className="text-2xl flex font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent relative"
           >
             Hami Parsa
-            <PiLaptopThin className="ml-1 mt-1.5 text-pink-400" />
+            <PiLaptopThin className="ml-1 mt-1.5 text-pink-400 animate-pulse" />
           </Link>
 
           {/* Desktop Menu */}
@@ -58,12 +93,10 @@ export default function NavBar() {
                   >
                     <span className="flex items-center">
                       {item.name}
-                      <Icon className="ml-2 text-lg text-cyan-400 group-hover:text-pink-400 transition-colors" />
+                      <Icon className="ml-2 text-lg text-cyan-400 group-hover:text-pink-400 transition-colors duration-300" />
                     </span>
                     <span
-                      className="absolute left-0 -bottom-1 h-[2px] w-0 
-                      bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500
-                      transition-all duration-500 group-hover:w-full"
+                      className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 transition-all duration-500 group-hover:w-full"
                     />
                   </Link>
                 </motion.div>
@@ -91,8 +124,7 @@ export default function NavBar() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
             className="md:hidden mx-4 mt-2 px-6 py-6 space-y-6 rounded-2xl
-            bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20
-            backdrop-blur-xl border border-white/20 shadow-xl"
+            backdrop-blur-xl bg-black/70 border border-white/10 shadow-xl relative overflow-hidden"
           >
             {menuItems.map((item, i) => {
               const Icon = item.icon;
@@ -105,8 +137,7 @@ export default function NavBar() {
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center font-semibold text-gray-200 
-                      hover:text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text"
+                    className="flex items-center font-semibold text-gray-200 hover:text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text transition-all duration-300"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name} <Icon className="ml-2 text-xl text-cyan-400" />

@@ -3,13 +3,14 @@
 import { useEffect, useRef } from "react";
 
 /**
- * GalaxyBackgroundAuto
+ * GalaxyBackgroundUltra
  * ------------------------
- * - Stars twinkle naturally
- * - Nebula layers move automatically
- * - No mouse parallax
+ * - Multi-layer stars with depth
+ * - Stars twinkle naturally with subtle glow
+ * - Nebula layers move & rotate slowly
+ * - Random shooting stars
  */
-export default function GalaxyBackgroundAuto() {
+export default function GalaxyBackgroundUltra() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -22,22 +23,29 @@ export default function GalaxyBackgroundAuto() {
     let height = canvas.height = window.innerHeight;
 
     // ===== Stars =====
-    const stars = Array.from({ length: 300 }).map(() => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      radius: Math.random() * 1.5 + 0.3,
-      speed: Math.random() * 0.3 + 0.05,
-      opacity: Math.random() * 0.8 + 0.2,
-      delta: Math.random() * 0.02 + 0.01,
-      layer: Math.random() * 2 + 1 // for depth effect
-    }));
+    const starLayers = [100, 100, 100]; // small, medium, large
+    const stars = starLayers.flatMap((count, layerIndex) => 
+      Array.from({ length: count }).map(() => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * (layerIndex + 1) * 0.8 + 0.2,
+        speedY: Math.random() * 0.3 + 0.05,
+        speedX: Math.random() * 0.1 - 0.05,
+        opacity: Math.random() * 0.8 + 0.2,
+        delta: Math.random() * 0.02 + 0.01,
+        layer: layerIndex + 1
+      }))
+    );
 
     // ===== Nebula layers =====
     const nebulaLayers = [
-      { color: "rgba(255, 77, 187, 0.15)", radius: 300, x: width * 0.3, y: height * 0.3, speed: 0.2 },
-      { color: "rgba(107, 91, 255, 0.12)", radius: 400, x: width * 0.7, y: height * 0.7, speed: 0.15 },
-      { color: "rgba(0, 245, 255, 0.1)", radius: 500, x: width * 0.5, y: height * 0.5, speed: 0.1 },
+      { color: "rgba(255, 77, 187, 0.12)", radius: 350, x: width * 0.2, y: height * 0.3, speed: 0.1, angle: 0 },
+      { color: "rgba(107, 91, 255, 0.1)", radius: 450, x: width * 0.7, y: height * 0.7, speed: 0.08, angle: 0 },
+      { color: "rgba(0, 245, 255, 0.08)", radius: 500, x: width * 0.5, y: height * 0.5, speed: 0.06, angle: 0 },
     ];
+
+    // ===== Shooting stars =====
+    const shootingStars: { x: number; y: number; length: number; speed: number; opacity: number }[] = [];
 
     let animationId: number;
 
@@ -53,25 +61,55 @@ export default function GalaxyBackgroundAuto() {
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, width, height);
 
-        // subtle automatic movement
-        layer.x += Math.sin(Date.now() * 0.00005) * 0.1;
-        layer.y += Math.cos(Date.now() * 0.00005) * 0.1;
+        layer.angle += 0.0005;
+        layer.x += Math.sin(layer.angle) * layer.speed;
+        layer.y += Math.cos(layer.angle) * layer.speed;
       });
 
       // ===== Draw Stars =====
       stars.forEach(star => {
-        // twinkle effect
         star.opacity += star.delta;
         if (star.opacity > 1 || star.opacity < 0.2) star.delta *= -1;
 
-        // vertical movement
-        star.y -= star.speed;
+        star.y -= star.speedY;
+        star.x += star.speedX;
         if (star.y < 0) star.y = height;
+        if (star.x < 0) star.x = width;
+        if (star.x > width) star.x = 0;
 
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255,255,255,${star.opacity})`;
+        ctx.shadowBlur = star.radius * 2;
+        ctx.shadowColor = "white";
         ctx.fill();
+      });
+
+      // ===== Shooting Stars =====
+      if (Math.random() < 0.005 && shootingStars.length < 2) {
+        shootingStars.push({
+          x: Math.random() * width,
+          y: Math.random() * height / 2,
+          length: Math.random() * 80 + 50,
+          speed: Math.random() * 5 + 6,
+          opacity: 1
+        });
+      }
+
+      shootingStars.forEach((star, index) => {
+        ctx.beginPath();
+        ctx.moveTo(star.x, star.y);
+        ctx.lineTo(star.x - star.length, star.y + star.length);
+        ctx.strokeStyle = `rgba(255,255,255,${star.opacity})`;
+        ctx.lineWidth = 2;
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = "white";
+        ctx.stroke();
+
+        star.x += star.speed;
+        star.y += star.speed;
+        star.opacity -= 0.02;
+        if (star.opacity <= 0) shootingStars.splice(index, 1);
       });
 
       animationId = requestAnimationFrame(animate);
